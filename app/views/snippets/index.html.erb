@@ -1,0 +1,12 @@
+<h1>Welcome to Tom and Mike's Snippets</h1>
+
+<h3>Created Snippets</h3>
+
+<% @snippets.each do |snip| %>
+<p>Title: <%= snip.title  %></p>
+<p>Body: <%= snip.body  %></p>
+<p><%= link_to "Edit", edit_snippet_path(snip) %></p>
+<p><%= link_to "Delete", snippet_path(snip), method: :delete,
+                                             data: { confirm: "Are you sure!?" } %></p>
+<hr>
+<% end %>

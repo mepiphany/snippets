@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+["Ruby", "Javascript", "CSS", "HTML"].each do |lan|
+  Kind.create(name: lan)
+end
