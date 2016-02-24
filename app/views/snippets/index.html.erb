@@ -3,7 +3,7 @@
 <h3>Created Snippets</h3>
 
 <% @snippets.each do |snip| %>
-<p>Title: <%= snip.title  %></p>
+<p>Title: <%= link_to snip.title, snippet_path(snip)%></p>
 <p>Body: <%= snip.body  %></p>
 <p><%= link_to "Edit", edit_snippet_path(snip) %></p>
 <p><%= link_to "Delete", snippet_path(snip), method: :delete,

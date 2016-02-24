@@ -19,6 +19,11 @@ class SnippetsController < ApplicationController
     end
   end
 
+  def show
+    @snippet = Snippet.find params[:id]
+  end
+
+
   def edit
     @snippet = Snippet.find params[:id]
   end
