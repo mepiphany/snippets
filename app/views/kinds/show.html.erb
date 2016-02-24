@@ -1,0 +1,6 @@
+<h1><%= @kind.name %></h1>
+
+<% @snippets.each do |snippets| %>
+<%= link_to snippets.title, snippet_path(snippets) %>
+<hr>
+<% end %>

@@ -1,6 +1,2 @@
-<h1>Snippets</h1>
-
-
-<p>Title: <%= @snippet.title %></p>
-<p>Body: <%= markdown(@snippet.body).html_safe %></p>
-<p>created by: <%= @snippet.user.first_name %></p>
+<h1><%= @snippet.title %></h1>
+<p><%= markdown(@snippet.body) %></p>

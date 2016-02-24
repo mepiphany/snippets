@@ -1,7 +1,9 @@
 class SnippetsController < ApplicationController
   before_action :user_authenticate, except: [:index]
+
   def index
     @snippets = Snippet.all
+    @kinds = Kind.all
   end
 
   def new
@@ -42,9 +44,7 @@ class SnippetsController < ApplicationController
     @snippet = Snippet.find params[:id]
     @snippet.destroy
     redirect_to root_path, notice: "Your snippet has been removed!"
-
   end
-
 
   private
 
